@@ -1,17 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+function Room() {
+  const [isLit, setLit] = useState(true);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+  return (
+    <div>
+      <div className={"box-div" + (isLit? "" : " box-div-dark")}> The Room is {isLit ? "Lit" : "Dark"} </div>
+
+      <div className='box-div-2'> 
+        <button className={'button' + (isLit ? "" : " box-div-dark")} onClick={() => setLit(!isLit)}> {isLit ? "TURN OFF" : "TURN ON"}</button>
+      </div>
+    </div>
+  )
+}
+
+ReactDOM.render(<Room />, document.querySelector('#root'));
