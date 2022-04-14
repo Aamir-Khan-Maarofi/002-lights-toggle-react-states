@@ -7,10 +7,14 @@ function Room() {
 
   return (
     <div>
-      <div className={"box-div" + (isLit? "" : " box-div-dark")}> The Room is {isLit ? "Lit" : "Dark"} </div>
+      <div className={"box-div" + (isLit ? "" : " box-div-dark")}>
+        The Room is {isLit ? "Lit" : "Dark"}
+      </div>
 
-      <div className='box-div-2'> 
-        <button className={'button' + (isLit ? "" : " box-div-dark")} onClick={() => setLit(!isLit)}> {isLit ? "TURN OFF" : "TURN ON"}</button>
+      <div className='box-div-2'>
+        <button className={'button' + (isLit ? "" : " box-div-dark")} onClick={() => setLit(!isLit)}>
+          {isLit ? "TURN OFF" : "TURN ON"}
+        </button>
       </div>
     </div>
   )
