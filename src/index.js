@@ -1,6 +1,7 @@
 import './index.css';
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
+import axios from 'axios';
 
 function Room() {
   const [isLit, setLit] = useState(true);
@@ -25,12 +26,6 @@ function Room() {
         <button className={'button' + (isLit ? "" : " box-div-dark")} onClick={() => setTemp(temp + 1)}>
           +
         </button>
-      </div>
-
-
-
-      <div className='box-div-2'>
-
       </div>
     </div>
   )
