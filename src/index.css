@@ -44,22 +44,18 @@ code {
   text-align: center;
   font-size: 100px;
   padding-top: 100px;
-  padding-bottom: 100px;
-}
-
-.box-div-2 {
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  padding-bottom: 50px;
 }
 
 .temprature {
   position: relative;
   top: 0;
   right: 0;
-  font-size: medium;
+  font-size: large;
+}
+
+.high-temp {
+  color: red;
 }
 
 .temp-toggle {
