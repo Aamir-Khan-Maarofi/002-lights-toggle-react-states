@@ -12,12 +12,8 @@ function Room() {
       </div>
 
       <div className='box-div-2'>
-        <button className={'button' + (isLit ? "" : " box-div-dark")} onClick={() => setLit(false)}>
-          TURN ON
-        </button>
-
-        <button className={'button' + (isLit ? "" : " box-div-dark")} onClick={() => setLit(true)}>
-          TURN OFF
+        <button className={'button' + (isLit ? "" : " box-div-dark")} onClick={() => setLit(!isLit)}>
+          {isLit ? "TURN OFF" : "TURN ON"}
         </button>
       </div>
     </div>
